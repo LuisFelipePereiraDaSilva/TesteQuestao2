@@ -15,11 +15,11 @@ class Produtos extends React.Component {
     return (
       <div>
         <ul>
-          {produtos.map((p) => (
-            <li>{p.descricao}</li>
+          {produtos.map((p, index) => (
+            <li key={index}>{p.descricao}</li>
           ))}
         </ul>
-        <button onClick={this.handleAddClick}>+</button>
+        <button onClick={() => this.handleAddClick()}>+</button>
       </div>
     );
   }
